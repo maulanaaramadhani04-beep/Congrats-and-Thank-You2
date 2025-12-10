@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ucapan — KKNT UNESA Desa Tamiajeng 2025</title>
+  <style>
+    :root{
+      --bg: linear-gradient(135deg,#fff7e6,#ffe7f0);
+      --accent:#ff6b6b;
+      --accent-2:#ffb86b;
+      --card:#ffffffcc;
+      --glass: rgba(255,255,255,0.6);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;margin:0}
+    body{
+      background:var(--bg);
+      display:flex;align-items:center;justify-content:center;
+      padding:24px;
+      color:#333;
+    }
+    .stage{
+      width:100%;max-width:960px;height:600px;background:var(--card);
+      border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,0.12);
+      overflow:hidden;position:relative;display:grid;grid-template-rows:1fr 72px;
+    }
+    .slides{position:relative;height:100%;display:flex;align-items:center;justify-content:center;}
+    .slide{position:absolute;inset:0;padding:40px;display:flex;gap:28px;align-items:center;justify-content:center;transition:opacity .6s ease,transform .6s ease;opacity:0;transform:translateY(20px);} 
+    .slide.show{opacity:1;transform:translateY(0)}
+    .left{flex:1;display:flex;align-items:center;justify-content:center}
+    .right{flex:1}
+    .photo{
+      width:360px;height:360px;border-radius:16px;overflow:hidden;flex-shrink:0;box-shadow:0 8px 20px rgba(0,0,0,0.08);background:linear-gradient(180deg,#fff,#f6f0ff);
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0;font-size:30px;line-height:1.1;color:#222}
+    p.lead{font-size:20px;margin-top:14px;color:#444}
+    .decor{font-weight:700;color:var(--accent);display:inline-block;margin-top:10px}
+
+    /* bottom controls */
+    .controls{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:transparent}
+    .dots{display:flex;gap:8px}
+    .dot{width:12px;height:12px;border-radius:50%;background:#eee;cursor:pointer;box-shadow:inset 0 -2px 0 rgba(0,0,0,0.05)}
+    .dot.active{background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+    .buttons{display:flex;gap:12px}
+    button.btn{background:var(--accent);border:none;padding:10px 16px;border-radius:12px;color:#fff;cursor:pointer;font-weight:600;box-shadow:0 6px 14px rgba(255,107,107,0.18)}
+    button.ghost{background:transparent;color:#333;border:1px solid rgba(0,0,0,0.06)}
+    .music-control{display:flex;gap:10px;align-items:center}
+    .credit{font-size:12px;color:#666}
+
+    /* responsive */
+    @media (max-width:800px){
+      .stage{height:560px}
+      .left{display:none}
+      .right{flex:1;padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="stage" role="region" aria-label="Ucapan KKNT UNESA Tamiajeng 2025">
+    <div class="slides">
+
+      <!-- Slide 1: Foto + Text -->
+      <section class="slide show" data-index="0" id="slide-1">
+        <div class="left">
+          <div class="photo">
+            <!-- Ganti gambar dengan foto Anda. Saat ini memakai gambar acak bertema desa. -->
+            <img src="Feed IG KKN.png" alt="Foto Desa / Komunitas"> 
+          </div>
+        </div>
+        <div class="right">
+          <h1>From me to all of you</h1>
+          <p class="lead">KKNT UNESA Desa Tamiajeng, Kec. Trawas, Kab. Mojokerto 2025.</p>
+          <div class="decor">Congratulations and thank you!</div>
+        </div>
+      </section>
+
+      <!-- Slide 2 -->
+      <section class="slide" data-index="1" id="slide-2">
+        <div style="text-align:center;max-width:760px">
+          <h1>We came here, to this village</h1>
+          <p class="lead">with empty minds and hearts. Here we gained knowledge and experience.</p>
+        </div>
+      </section>
+
+      <!-- Slide 3 -->
+      <section class="slide" data-index="2" id="slide-3">
+        <div style="text-align:center;max-width:760px">
+          <h1>Our journey may be short</h1>
+          <p class="lead">tetapi jejaknya akan selalu tertinggal dalam ingatan. Semoga langkah kita berikutnya tetap saling menguatkan.</p>
+        </div>
+      </section>
+
+      <!-- Slide 4 -->
+      <section class="slide" data-index="3" id="slide-4">
+        <div style="text-align:center;max-width:760px">
+          <h1>Amidst fatigue and challenges</h1>
+          <p class="lead">kalian membawa cahaya. Setiap momen bersama menjadi cerita indah yang akan selalu aku kenang.</p>
+        </div>
+      </section>
+
+      <!-- Slide 5 -->
+      <section class="slide" data-index="4" id="slide-5">
+        <div style="text-align:center;max-width:760px">
+          <h1>Thank you, everyone.</h1>
+          <p class="lead">Untuk kerja keras, tawa, kesabaran, dan hati baik kalian. Kalian membuat KKN-T menjadi pengalaman yang bermakna. Perpisahan ini hanyalah awal dari cerita baru. Sukses untuk kita semua, kembali ke kampus, dan meraih impian masing-masing. Jaga silaturahmi, ya! Sampai jumpa di lain kesempatan, dan ingat, kalian adalah kelompok bahkan teman KKN terbaik!</p>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="music-control">
+        <!-- Audio element: ganti src dengan file mp3 lokal atau dengan link streaming yang sah. -->
+        <audio id="bg-audio" loop preload="none">
+          <!-- Contoh penggantian: gunakan file lokal "kita_ke_sana.mp3" di folder yang sama, atau gunakan URL streaming yang resmi. -->
+          <source src="BS KITA KE SANA.mp3"
+          <!-- Jika Anda ingin menyematkan YouTube, ganti ini dengan iframe YouTube dan setel play/pause lewat API (butuh izin tambahan). -->
+        </audio>
+        <button class="ghost" id="play-btn" aria-label="Play musik">Play Backsound</button>
+        <button class="ghost" id="mute-btn" aria-label="Matikan suara">Mute</button>
+        <div class="credit">Backsound: Hindia - "Kita Ke Sana"</div>
+      </div>
+
+      <div class="buttons">
+        <div class="dots" id="dots"></div>
+        <div>
+          <button class="btn" id="prev">Sebelumnya</button>
+          <button class="btn" id="next">Berikutnya</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple slideshow logic
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const dotsWrap = document.getElementById('dots');
+    let idx = 0;
+    const audio = document.getElementById('bg-audio');
+    const playBtn = document.getElementById('play-btn');
+    const muteBtn = document.getElementById('mute-btn');
+
+    // create dots
+    slides.forEach((s,i)=>{
+      const dot = document.createElement('div');
+      dot.className='dot'+(i===0?' active':'');
+      dot.setAttribute('data-i',i);
+      dot.addEventListener('click',()=>goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+
+    function show(i){
+      slides.forEach(s=>s.classList.remove('show'));
+      slides[i].classList.add('show');
+      document.querySelectorAll('.dot').forEach(d=>d.classList.remove('active'));
+      document.querySelectorAll('.dot')[i].classList.add('active');
+    }
+
+    function next(){ idx = (idx+1) % slides.length; show(idx); }
+    function prev(){ idx = (idx-1 + slides.length) % slides.length; show(idx); }
+    function goTo(i){ idx = i; show(idx); }
+
+    document.getElementById('next').addEventListener('click',()=>{ next(); });
+    document.getElementById('prev').addEventListener('click',()=>{ prev(); });
+
+    // keyboard
+    document.addEventListener('keydown', (e)=>{
+      if(e.key==='ArrowRight') next();
+      if(e.key==='ArrowLeft') prev();
+      if(e.key===' ') { e.preventDefault(); togglePlay(); }
+    });
+
+    // autoplay every 6.5s
+    let autoplay = setInterval(()=> next(),6500);
+    // pause autoplay on hover
+    document.querySelector('.stage').addEventListener('mouseenter', ()=> clearInterval(autoplay));
+    document.querySelector('.stage').addEventListener('mouseleave', ()=> autoplay = setInterval(()=> next(),6500));
+
+    // audio controls: note — many browsers block autoplay with sound. User must click Play.
+    function togglePlay(){
+      if(audio.paused){ audio.play().catch(()=>{}); playBtn.textContent='Pause Backsound'; }
+      else{ audio.pause(); playBtn.textContent='Play Backsound'; }
+    }
+    playBtn.addEventListener('click', ()=> togglePlay());
+
+    let muted=false;
+    muteBtn.addEventListener('click', ()=>{
+      muted = !muted; audio.muted = muted; muteBtn.textContent = muted? 'Unmute' : 'Mute';
+    });
+
+    // On load, make sure first slide visible
+    show(0);
+
+    // Helpful: if you want to use YouTube as source, replace the <audio> element with an iframe and control via YouTube IFrame API.
+    // NOTE: Browsers block autoplay of audible audio; users should press Play to start the backsound.
+  </script>
+</body>
+</html>
